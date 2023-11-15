@@ -1,7 +1,9 @@
-import java.sql.Array;
-import java.util.ArrayList;
+import bit_manipulation.*;
+
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.function.Predicate;
 
 public class Main {
@@ -22,9 +24,33 @@ public class Main {
 //        reverseWordByWord();
 //        smallestAndBiggestPalindrome();
 //        swapWithoutTempVariable();
-        separateIndividualCharacterFromString();
-
+//        separateIndividualCharacterFromString();
+//        checkStringAreAnagram();
+//        BalancedParenthesis.main();
+//        ReverseString.reverseString();
+//        PostfixToPrefix.postfixToPrefix();
+//        ReverseArray.reverseArray();
+//        RemoveCharacters.removeCharacter();
+//        ReverseStackUsingQueue.reverseStackUsingQueue();
+//        DeleteMidElement.deleteMidElementFromStack();
+//        ReverseWordByWord.reverseWordByWord();
+//         QueueUsingStacks.queueUsingStack();
+//        BitwiseOperator.BitwiseOperation();
+//        ShiftOperation.leftShiftOperation();
+//        ShiftOperation.rightShiftOperation();
+//        SetClearToggle.setBits();
+//        SetClearToggle.clearBits();
+//        SetClearToggle.toggleBits();
+//        CheckBits.checkBitAtNthPosIsSetOrNot();
+//        MultiplyByNumber2.multiplyByNum2();
+//        DivideNumberBy2.divideNumberBy2();
+//        ComputeXor.computeXor();
+//        CheckPowerOf2.checkANumIsPowerOf2();
+//        CountSetBit.countSetBitInInteger();
+        RightMostSetBitPosition.rightMostSetBitPos();
     }
+
+
 
     private static void fibonacci(){
         Scanner scn = new Scanner(System.in);
@@ -347,6 +373,71 @@ public class Main {
         String inputStr = scn.nextLine();
         for (int i=0; i<=inputStr.length()-1; i++){
             System.out.println(inputStr.charAt(i));
+        }
+    }
+
+    static void checkStringAreAnagram(){
+        Scanner scn = new Scanner(System.in);
+        char[] input = scn.next().toCharArray();
+        char[] input2 = scn.next().toCharArray();
+        Boolean isAnagram = true;
+
+        if(input2.length != input.length){
+            System.out.println("It is not Anagram");
+        }else{
+            HashMap<Character,Integer> inputHashMap = new HashMap<Character,Integer>();
+
+            for(int i=0; i < input.length; i++){
+                Integer charValue = inputHashMap.get(input[i]);
+                Integer charValue1 = inputHashMap.get(input2[i]);
+
+                if(charValue == null){
+                    inputHashMap.put(input[i],1);
+                }else{
+                    inputHashMap.put(input[i],charValue+1);
+                }
+
+                if(charValue1 == null){
+                    inputHashMap.put(input[i],-1);
+                }else{
+                    inputHashMap.put(input[i],charValue1-1);
+                }
+            }
+
+            isAnagram = inputHashMap.values().stream().equals(0);
+            System.out.println(inputHashMap);
+            if(isAnagram) System.out.println("It is Anagram");
+            else System.out.println("It is not Anagram");
+        }
+//
+//        HashMap<Character,Integer> inputHashMap =  new HashMap<>();
+//        HashMap<Character,Integer> input2HashMap = new HashMap<>();
+//
+//       updateElementInHashMap(input,inputHashMap);
+//       updateElementInHashMap(input2,input2HashMap);
+//
+//       Boolean isAnagram = true;
+//
+//       for(int i=0; i<input.length;i++){
+//           Integer input2CharCount = input2HashMap.get(input[i]);
+//           if(input2CharCount == null  || !input2CharCount.equals(inputHashMap.get(input[i]))){
+//               isAnagram = false;
+//               break;
+//           }
+//       }
+//
+//       if(isAnagram) System.out.println("It is Anagram");
+//       else System.out.println("It is not Anagram");
+
+    }
+
+    static void updateElementInHashMap(char[] input, HashMap<Character,Integer> inputHashMap){
+        for(int i = 0; i< input.length;i++){
+            if(inputHashMap.containsKey(input[i])){
+                inputHashMap.put(input[i],inputHashMap.get(input[i]+1));
+            }else{
+                inputHashMap.put(input[i],1);
+            }
         }
     }
 
