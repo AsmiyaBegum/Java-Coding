@@ -12,4 +12,9 @@ public class CountSetBit {
 
          System.out.println(count);
     }
+
+    public static void countSetBit(){
+        int num = 14;
+        System.out.println(Integer.bitCount(num));
+    }
 }

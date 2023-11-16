@@ -30,5 +30,7 @@ public class ShiftOperation {
         String leftShiftBinary16 = String.format("%16s",leftShiftBinaryRep).replace(" ","0");
         System.out.println("Right Shift Binary Result " + leftShiftBinary);
         System.out.println("Right Shift Binary Result (16B) " + leftShiftBinary16);
+        System.out.println("Unsigned right shift result : " + (a>>>k));
+
     }
 }

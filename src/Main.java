@@ -3,7 +3,6 @@ import bit_manipulation.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.function.Predicate;
 
 public class Main {
@@ -47,7 +46,24 @@ public class Main {
 //        ComputeXor.computeXor();
 //        CheckPowerOf2.checkANumIsPowerOf2();
 //        CountSetBit.countSetBitInInteger();
-        RightMostSetBitPosition.rightMostSetBitPos();
+//        RightMostSetBitPosition.rightMostSetBitPos();
+//        AddTwoBitStrings.addTwoBitStrings1();
+//        AddTwoBitStrings.addTwoBitStrings();
+//        RussianPeasant.multiplyTwoNumber();
+//        CheckIntegerOverFlow.checkIntegerOverFlow();
+//        ModuloDivision.moduloDivisionByPowerOf2();
+//        CountSetBit.countSetBit();
+//        RotateBitsByCircular.leftRotateBitsByNumber();
+//        RotateBitsByCircular.rightRotateBitsByNumber();
+//        NumberOccuringOddTimes.numberOccuringOddTimes();
+//        TurnOffRightMostSetBit.turnOffRightMostSetBit();
+//        DetectIntegerHasOppositeSigns.detectTwoIntegerHasOppSigns();
+//        XORWithoutXOROperator.xorOperation();
+//        BinaryStringRepresentation.binaryStringRepresentation2();
+//        BinaryStringRepresentation.binaryStringRepresentation1();
+//        SwapTwoNumbers.swapTwoNumWithoutTempVariable();
+//        CheckTwoNumEqualWithoutArithmeticOperator.checkTwoNumsEqual();
+        OnlySetBitPosition.onlySetBitPosition();
     }
 
 

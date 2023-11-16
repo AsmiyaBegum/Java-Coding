@@ -9,7 +9,7 @@ public class RightMostSetBitPosition {
 
 
         if((num & 1) == 0){
-            // if num is add, return 1;
+            // if num is odd, return 1;
             pos = 1;
         }else{
             while(num!=0){
